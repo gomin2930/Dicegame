@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/e7f299d932.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- 상단부 -->
+<div class="top-container">
+    <div class="top-wrap">
+        <ul class="nav-area">
+            <li><a href="dice1">DICE1</a></li>
+            <li><a href="dice2">DICE2</a></li>
+            <li><a href="#">DICE3</a></li>
+            <li><a href="#">DICE4</a></li>
+        </ul>
+
+        <div class="intro-text">
+            <div class="title1">즐거운 주사위 게임</div>
+            <div class="contents1">게임, 스트레스 해소 수단이 될 수 있지만 과하면 인생에 독이 됩니다</div>
+        </div>
+    </div>
+</div>
+
+<!-- 중간부 1 -->
+<div class="middle-container">
+    <!-- 통계 -->
+    <ul class="amount-area">
+        <li>
+            <div>
+                <div class="contents1">도박중독 추정 한국 성인 인구</div>
+                <div class="result">약 237만 명</div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <div class="contents1">돈내기 게임 최초 경험 연령</div>
+                <div class="result">11.3세</div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <div class="contents1">청소년 도박 위험군 </div>
+                <div class="result">2만 8천여 명</div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <div class="contents1">2023년 청소년 도박중독 환자</div>
+                <div class="result">111명</div>
+            </div>
+        </li>
+    </ul>
+
+    <!-- 메인 텍스트1 -->
+    <div class="main-text1">
+        <div class="title1">ABOUT</div>
+        <div class="contents1">주사위 게임 : 주사위를 이용한 모든 종류의 게임을 지칭한다</div>
+    </div>
+
+    <!-- 주사위 게임 설명 -->
+    <ul class="about">
+        <li>
+            <div class="icon-img">
+                <i class="fa-solid fa-dice-d6"></i>
+            </div>
+            <div class="contents-bold">주사위</div>
+            <div class="contents2">주사위에는 눈이 1~6개가 있습니다</div>
+        </li>
+        <li>
+            <div class="icon-img">
+                <i class="fa-solid fa-rotate-right"></i>
+            </div>
+            <div class="contents-bold">굴리기 </div>
+            <div class="contents2">주사위를 굴려 나온 주사위의 눈의 개수를 확인합니다</div>
+        </li>
+        <li>
+            <div class="icon-img">
+                <i class="fa-solid fa-hand-peace"></i>
+            </div>
+            <div class="contents-bold">승리</div>
+            <div class="contents2">게임 전 세운 규칙에 따라 승리가 결정됩니다</div>
+        </li>
+    </ul>
+</div>
+
+<!-- 중간부 2  -->
+<div class="middle-container2">
+    <!-- 메인 텍스트2-->
+    <div class="main-text2">
+        <div class="title1">SERVICE</div>
+        <div class="contents1">다양한 방식의 주사위 게임을 제공합니다</div>
+    </div>
+
+    <!-- 서비스 설명 -->
+    <div class="service">
+        <div class="service-photo">
+            <img src="assets/img/service.jpg">
+        </div>
+
+        <div class="contents2">
+            <div class="contents3">주사위가 굴러서 시작일까요? 시작 버튼을 눌러서 주사위가 구른 것일까요?</div>
+            이게 무슨 말인지 의문이 드시는 분이 많으실 것으로 예상합니다.
+            <br>왜냐면 저는 인프런 김영한 MVC 강의를 듣고 여러 버전의 주사위를 만들 것이기 때문이니까요.
+            <br>처음에는 해당 페이지에 들어가자마자 바로 숫자만 나오는 주사위 게임이 시작될 것이고,
+            <br>그 다음부터는 버튼 없이 이미지가 나오는 주사위 게임이 시작될 것입니다.
+            <br>그래도 시작 버튼 누르고 굴리는 주사위도 구현 할 것이니 걱정 많이 해주세요.
+            <br>
+            <br>처음에 매뜨 random 함수 배우면서 했던 주사위 게임을 콘솔 창이 아닌 이미지? 구현으로 하고자
+            <br>했던 것인데 생각보다 일을 크게 벌인 것 같습니다.
+            <br>2인 게임도 만들고 싶은데 이건 앞으로 노력해보겠습니다.
+            <br>
+            <br>두서 없는 글을 읽어주셔서 감사합니다.
+        </div>
+    </div>
+</div>
+
+
+<!-- 하단부 -->
+<div class="bottom-container">
+    <!-- 메인 텍스트3 -->
+    <div class="main-text3">
+        <ul>
+            <li>
+                <div>
+                    <div class="title1">CONTACT</div>
+                </div>
+                <div>중독은 치료가 필요합니다. 우리에게 도움을 요청하세요.</div>
+                <div class="more">더 알아보기</div>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <div>
+            <div class="title1">LOGO</div>
+        </div>
+        <div>
+            주인장. 고민중 <br>
+            주 소. 인천광역시 을왕리 똥물 어느곳의 고객지원실<br>
+            FAX/TEL. 032 - 123 - 4567 <br>
+            COPYRIGHT 2024. GOMINING. ALL RIGHT RESERVED.
+        </div>
+    </footer>
+</div>
+</body>
+</html>
