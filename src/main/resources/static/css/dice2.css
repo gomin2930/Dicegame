@@ -1,0 +1,49 @@
+:root {
+    --point-color: #fb3737;
+    --font-color: #363430;
+    --background-color: #fff;
+}
+
+.dice-container2 {
+    max-width: 1280px;
+    height: 400px;
+    padding-top: 50px;
+    margin: auto;
+    text-align: center;
+    background: var(--background-color);
+}
+
+.dice-wrap1 {
+    height: 150px;
+    margin: auto;
+    align-content: center;
+}
+
+.dice2-number {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--font-color);
+}
+
+.start-btn {
+    display: block;
+    width: 150px;
+    height: 60px;
+    margin: 15px auto;
+}
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--point-color);
+    color: var(--background-color);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.dice-wrap2 {
+    height: 200px;
+    margin: auto;
+    align-content: center;
+    line-height: 2.1;
+}
