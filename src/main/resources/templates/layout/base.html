@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      th:fragment="layout (title, link, script, content)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title th:replace="${title}">레이아웃 타이틀</title>
+
+    <!-- 공통 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style2.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/e7f299d932.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="base-container">
+    <div class="navbar">
+        <ul class="navbar-wrap">
+            <li><a href="dice1">DICE1</a></li>
+            <li><a href="dice2">DICE2</a></li>
+            <li><a href="#">DICE3</a></li>
+            <li><a href="#">DICE4</a></li>
+        </ul>
+
+        <div class="base-main-text">
+            <div class="base-main-title">즐거운 주사위 게임</div>
+            <div class="base-sub-title">게임, 스트레스 해소 수단이 될 수 있지만 과하면 인생에 독이 됩니다</div>
+        </div>
+    </div>
+</nav>
+
+<div th:replace="${content}">
+    <p>레이아웃 컨텐트</p>
+</div>
+</body>
+</html>
