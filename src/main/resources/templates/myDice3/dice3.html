@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org"
-      th:fragment="layout (title, link, script, content)">
+
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title th:replace="${title}">레이아웃 타이틀</title>
+    <title>dice3</title>
 
-    <!-- 공통 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link th:href="@{css/dice3.css}" rel="stylesheet">
+    <link th:href="@{assets/css/style2.css}" rel="stylesheet">
+    <link th:href="@{assets/css/reset.css}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/style2.css" rel="stylesheet" type="text/css">
+
     <script src="https://kit.fontawesome.com/e7f299d932.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -32,8 +31,23 @@
     </div>
 </nav>
 
-<div th:replace="${content}">
-    <p>레이아웃 컨텐트</p>
-</div>
+<section class="dice-container3-setting">
+    <form method="post" action="/dice3" th:object="${playerDTO}">
+        <div class="form-wrap">
+            <label class="playerName">player1</label>
+            <input class="player1" type="text" th:field="${playerDTO.player1Name}" placeholder="이름을 입력하세요">
+        </div>
+
+        <div class="form-wrap">
+            <label class="playerName">player2</label>
+            <input class="player2" type="text" th:field="${playerDTO.player2Name}" placeholder="이름을 입력하세요">
+        </div>
+
+        <div class="submit-btn">
+            <button class="btn" type="submit">확인</button>
+        </div>
+    </form>
+</section>
+
 </body>
 </html>

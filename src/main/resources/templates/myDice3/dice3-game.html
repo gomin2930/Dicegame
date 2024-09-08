@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>dice3게임</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link th:href="@{css/game.css}" rel="stylesheet">
+    <link th:href="@{assets/css/style2.css}" rel="stylesheet">
+    <link th:href="@{assets/css/reset.css}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/e7f299d932.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="base-container">
+    <div class="navbar">
+        <ul class="navbar-wrap">
+            <li><a href="dice1">DICE1</a></li>
+            <li><a href="dice2">DICE2</a></li>
+            <li><a href="dice3">DICE3</a></li>
+            <li><a href="#">DICE4</a></li>
+        </ul>
+
+        <div class="base-main-text">
+            <div class="base-main-title">즐거운 주사위 게임</div>
+            <div class="base-sub-title">게임, 스트레스 해소 수단이 될 수 있지만 과하면 인생에 독이 됩니다</div>
+        </div>
+    </div>
+</nav>
+
+<section class="game-container">
+    <div class="top-message">
+        <div th:if="${scoreCheck==0}">주사위를 굴려 먼저 50점을 달성하면 승리입니다.</div>
+        <div th:if="${scoreCheck==1}"><span th:text="${player1.name}"></span><span>의 승리!</span></div>
+        <div th:if="${scoreCheck==2}"><span th:text="${player2.name}"></span><span>의 승리!</span></div>
+        <div th:if="${scoreCheck==3}">무승부!</div>
+    </div>
+
+    <!-- 플레이어 이름 -->
+    <div class="game-player-box">
+        <div class="game-player-name">
+            <span>이름 : </span><span th:text="${player1.name}">텍스트</span>
+        </div>
+    </div>
+    <div class="game-player-box">
+        <div class="game-player-name">
+            <span>이름 : </span><span th:text="${player2.name}">텍스트</span>
+        </div>
+    </div>
+
+    <!-- 주사위 숫자 -->
+    <div class="game-player-box">
+        <div class="game-number" th:if="${player1.getNumber() == 0}">
+            <span>주사위를 굴리세요!</span>
+        </div>
+        <div class="game-number" th:if="${player1.getNumber() != 0}">
+            <span>번호 : </span><span th:text="${player1.number}">텍스트</span>
+        </div>
+    </div>
+    <div class="game-player-box">
+        <div class="game-number" th:if="${player2.getNumber() == 0}">
+            <span>주사위를 굴리세요!</span>
+        </div>
+        <div class="game-number" th:if="${player2.getNumber() != 0}">
+            <span>번호 : </span><span th:text="${player2.number}">텍스트</span>
+        </div>
+    </div>
+
+    <!-- 주사위 숫자 총합 -->
+    <div class="game-player-box">
+        <div class="game-total">
+            <span>총합 : </span><span th:text="${player1.totalScore}">텍스트</span>
+        </div>
+    </div>
+    <div class="game-player-box">
+        <div class="game-total">
+            <span>총합 : </span><span th:text="${player2.totalScore}">텍스트</span>
+        </div>
+    </div>
+
+    <!-- 주사위 숫자 기록 -->
+    <div class="game-records">
+        <span>숫자 기록</span>
+        <span th:text="${player1.records}">텍스트</span>
+    </div>
+    <div class="game-records">
+        <span>숫자 기록</span>
+        <span th:text="${player2.records}">텍스트</span>
+    </div>
+
+    <div class="dice-roll">
+        <button type="button" onclick="location.href='/dice3-roll'">주사위 굴리기</button>
+    </div>
+
+</section>
+
+</body>
+</html>

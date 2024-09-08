@@ -1,0 +1,42 @@
+:root {
+    --point-color: #fb3737;
+    --font-color: #363430;
+    --background-color: #fff;
+}
+
+.dice-container3-setting {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    gap: 20px;
+    background: var(--background-color);
+}
+
+.form-wrap {
+    margin: 20px auto 20px auto;
+}
+
+.playerName {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.dice-container3-setting input {
+    width: 250px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid var(--font-color);
+    font-size: 20px;
+    color: var(--font-color);
+}
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--point-color);
+    color: var(--background-color);
+    font-size: 20px;
+    cursor: pointer;
+}
