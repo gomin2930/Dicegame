@@ -11,4 +11,7 @@ public interface IDiceService {
 
     // 각 숫자별로 나온 횟수를 가져옴.
     DiceRecords getRecords();
+
+    // 주사위 기록 초기화
+    void reset(DiceRecords diceRecords);
 }

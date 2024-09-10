@@ -44,4 +44,10 @@ public class DiceServiceImpl implements IDiceService{
     public DiceRecords getRecords() {
         return diceRepository.findAll();
     }
+
+    // 저장된 주사위 기록 초기화
+    @Override
+    public void reset(DiceRecords diceRecords) {
+        diceRecords.getRecords().clear();
+    }
 }

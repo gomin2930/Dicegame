@@ -19,24 +19,12 @@
     align-content: center;
 }
 
-.dice2-number {
-    font-size: 48px;
-    font-weight: bold;
-    color: var(--font-color);
-}
-
 .dice2-btn {
     padding-top: 20px;
 }
 
-.replay-btn {
-    display: inline-block;
-    width: 150px;
-    height: 60px;
-}
-
 .reset-btn {
-    display: inline-block;
+    display: block;
     width: 150px;
     height: 60px;
 }
@@ -48,11 +36,4 @@
     color: var(--background-color);
     font-size: 20px;
     cursor: pointer;
-}
-
-.dice-wrap2 {
-    height: 200px;
-    margin: auto;
-    align-content: center;
-    line-height: 2.1;
 }

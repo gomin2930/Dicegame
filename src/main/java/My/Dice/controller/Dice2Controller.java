@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Slf4j
 @Controller
@@ -16,8 +17,14 @@ public class Dice2Controller {
 
     private final IDiceService diceService;
 
+
     @GetMapping("/dice2")
-    public String Dice2(Model model) {
+    public String Dice2(){
+        return "myDice2/dice2-reset";
+    }
+
+    @PostMapping("/dice2/game")
+    public String Dice2Game(Model model) {
         // 주사위 생성
         Dice dice2 = new Dice();
         // 주사위 기록 생성
@@ -37,5 +44,18 @@ public class Dice2Controller {
 
         return "myDice2/dice2";
 
+    }
+
+    @PostMapping("/dice2/reset")
+    public String reset(Model model) {
+
+        // 주사위 기록 불러오기
+        DiceRecords diceRecords = diceService.getRecords();
+
+        // 주사위 기록 초기화
+        diceService.reset(diceRecords);
+        model.addAttribute("diceRecords", diceRecords);
+
+        return "myDice2/dice2-reset";
     }
 }
