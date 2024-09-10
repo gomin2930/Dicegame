@@ -7,6 +7,7 @@
 3. HTML <br>
 4. CSS <br>
 5. Thymeleaf <br>
+6. Js <br>
 
 <h2>TODO</h2>
 1. MVC패턴과 타임리프를 사용하여 랜덤숫자가 나오는 주사위 게임 만들기<br>
