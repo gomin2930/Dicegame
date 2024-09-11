@@ -13,7 +13,7 @@
     background: var(--background-color);
 }
 
-.dice-wrap1 {
+.dice-wrap2 {
     height: 150px;
     margin: auto;
     align-content: center;
@@ -50,7 +50,7 @@
     cursor: pointer;
 }
 
-.dice-wrap2 {
+.dice-wrap3 {
     height: 200px;
     margin: auto;
     align-content: center;

@@ -7,9 +7,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link th:href="@{css/dice2.css}" rel="stylesheet">
-    <link th:href="@{assets/css/style2.css}" rel="stylesheet">
-    <link th:href="@{assets/css/reset.css}" rel="stylesheet">
+<!--    <link th:href="@{css/dice2-2.css}" rel="stylesheet">-->
+    <link href="/css/dice2-2.css" type="text/css" rel="stylesheet">
+<!--    <link th:href="@{assets/css/style2.css}" rel="stylesheet">-->
+    <link href="/assets/css/style2.css" type="text/css" rel="stylesheet">
+<!--    <link th:href="@{assets/css/reset.css}" rel="stylesheet">-->
+    <link href="/assets/css/reset.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/e7f299d932.js" crossorigin="anonymous"></script>
@@ -18,9 +21,9 @@
 <nav class="base-container">
     <div class="navbar">
         <ul class="navbar-wrap">
-            <li><a href="dice1">DICE1</a></li>
-            <li><a href="dice2">DICE2</a></li>
-            <li><a href="#">DICE3</a></li>
+            <li><a href="/dice1">DICE1</a></li>
+            <li><a href="/dice2">DICE2</a></li>
+            <li><a href="/dice3">DICE3</a></li>
             <li><a href="#">DICE4</a></li>
         </ul>
 
@@ -32,7 +35,7 @@
 </nav>
 
 <section class="dice-container2">
-    <div class="dice-wrap1">
+    <div class="dice-wrap2">
         <div class="dice2-number" th:text="${dice2.getNumber()}"></div>
         <div class="dice2-btn">
             <div class="replay-btn">
@@ -49,7 +52,7 @@
         </div>
 
     </div>
-    <div class="dice-wrap2">
+    <div class="dice-wrap3">
         <div><i class="fa-solid fa-dice-one"></i> : <span th:text="${diceRecords.records[1]}"></span></div>
         <div><i class="fa-solid fa-dice-two"></i> : <span th:text="${diceRecords.records[2]}"></span></div>
         <div><i class="fa-solid fa-dice-three"></i> : <span th:text="${diceRecords.records[3]}"></span></div>
