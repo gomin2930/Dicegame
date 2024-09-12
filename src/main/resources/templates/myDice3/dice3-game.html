@@ -81,16 +81,32 @@
         </div>
     </div>
 
-    <!-- 주사위 숫자 기록 -->
     <div class="game-records">
         <span>숫자 기록</span>
-        <span th:text="${player1.records}">텍스트</span>
+        <div class="dice3-numimg">
+        <span th:each="record : ${player1.records}">
+            <i th:class="'fas ' +
+                (${record == 1} ? 'fa-dice-one' :
+                (record == 2 ? 'fa-dice-two' :
+                (record == 3 ? 'fa-dice-three' :
+                (record == 4 ? 'fa-dice-four' :
+                (record == 5 ? 'fa-dice-five' : 'fa-dice-six')))))"></i>
+        </span>
+        </div>
     </div>
     <div class="game-records">
         <span>숫자 기록</span>
-        <span th:text="${player2.records}">텍스트</span>
+        <div class="dice3-numimg">
+        <span th:each="record : ${player2.records}">
+            <i th:class="'fas ' +
+                (${record == 1} ? 'fa-dice-one' :
+                (record == 2 ? 'fa-dice-two' :
+                (record == 3 ? 'fa-dice-three' :
+                (record == 4 ? 'fa-dice-four' :
+                (record == 5 ? 'fa-dice-five' : 'fa-dice-six')))))"></i>
+        </span>
+        </div>
     </div>
-
     <div class="dice-roll">
         <button type="button" onclick="location.href='/dice3-roll'">주사위 굴리기</button>
     </div>
